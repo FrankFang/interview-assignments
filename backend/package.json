@@ -1,0 +1,38 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "### Typescript 实现短域名服务（细节可以百度/谷歌）",
+  "main": "index.js",
+  "module": "commonjs",
+  "scripts": {
+    "dev": "npm run watch",
+    "watch": "tsx watch --clear-screen=false src/main.ts",
+    "build": "tsc",
+    "start": "npm run serve",
+    "serve": "npm run build && TS_NODE_BASEURL=./dist node -r tsconfig-paths/register dist/main.js",
+    "db:gen": "drizzle-kit generate:pg",
+    "db:mig": "tsx src/cli/migrate.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.18",
+    "@types/jest": "^29.5.5",
+    "@types/supertest": "^2.0.13",
+    "drizzle-kit": "^0.19.13",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.1",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^3.13.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@types/pg": "^8.10.3",
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.28.6",
+    "express": "^4.18.2",
+    "pg": "^8.11.3"
+  }
+}

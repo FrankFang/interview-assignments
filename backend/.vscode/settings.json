@@ -1,0 +1,9 @@
+{
+  "cSpell.words": [
+    "healthcheck"
+  ],
+  // put this in your settings object
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+  },
+}

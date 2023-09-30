@@ -1,5 +1,15 @@
 # TypeScript Backend Engineer Assignment
 
+## 开发步骤
+
+### 创建数据库
+
+```bash
+docker run -d -p 5432:5432 --name db -e POSTGRES_USER=frank -e POSTGRES_PASSWORD=123456 -e POSTGRES_DB=dev \
+-e PGDATA=/var/lib/postgresql/data/pgdata -v db:/var/lib/postgresql/data postgres:14
+
+```
+
 ### Typescript 实现短域名服务（细节可以百度/谷歌）
 
 撰写两个 API 接口
