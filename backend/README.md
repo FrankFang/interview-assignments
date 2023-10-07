@@ -10,6 +10,8 @@ docker run -d -p 5432:5432 --name db -e POSTGRES_USER=frank -e POSTGRES_PASSWORD
 
 ```
 
+### 迁移数据库
+
 ### Typescript 实现短域名服务（细节可以百度/谷歌）
 
 撰写两个 API 接口

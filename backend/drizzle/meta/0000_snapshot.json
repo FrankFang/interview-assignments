@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "pg",
-  "id": "e7592bbe-1e5b-4a7d-99f6-db17ed191419",
+  "id": "90dd8562-73bd-4996-8236-0707214e8d72",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "sequences": {
@@ -19,14 +19,13 @@
           "type": "bigint",
           "primaryKey": false,
           "notNull": true,
-          "default": 1
+          "default": 0
         },
         "name": {
           "name": "name",
           "type": "varchar(100)",
           "primaryKey": false,
-          "notNull": true,
-          "default": "'short_url_sequence'"
+          "notNull": true
         },
         "created_at": {
           "name": "created_at",

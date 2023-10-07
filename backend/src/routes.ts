@@ -22,7 +22,7 @@ export const route = (app: Application) => {
       })
     })
   })
-  app.get('/hi', show)
-  app.get('/hi', create)
+  app.post('/s', create)
+  app.get('/s/:slug', show)
 
 }

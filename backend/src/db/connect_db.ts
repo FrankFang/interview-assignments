@@ -1,3 +1,4 @@
+import * as schema from '@/db/schema'
 import 'dotenv/config'
 import { drizzle } from "drizzle-orm/node-postgres"
 import { Pool } from "pg"
@@ -20,7 +21,7 @@ export const connectDb = async () => {
     })
   }
   const client = await pool.connect()
-  const db = drizzle(client)
+  const db = drizzle(client, { schema })
   return {
     client,
     db,

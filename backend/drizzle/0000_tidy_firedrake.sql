@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS "sequences" (
 	"id" serial PRIMARY KEY NOT NULL,
-	"number" bigint DEFAULT 1 NOT NULL,
-	"name" varchar(100) DEFAULT 'short_url_sequence' NOT NULL,
+	"number" bigint DEFAULT 0 NOT NULL,
+	"name" varchar(100) NOT NULL,
 	"created_at" timestamp DEFAULT now() NOT NULL,
 	"updated_at" timestamp DEFAULT now() NOT NULL
 );
