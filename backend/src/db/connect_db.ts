@@ -1,4 +1,5 @@
 import * as schema from '@/db/schema'
+import { DatabaseConnectionError } from '@/lib/errors'
 import 'dotenv/config'
 import { drizzle } from "drizzle-orm/node-postgres"
 import { Pool } from "pg"
@@ -20,7 +21,7 @@ export const connectDb = async () => {
       process.exit(1)
     })
   }
-  const client = await pool.connect()
+  const client = await pool.connect().catch(err => Promise.reject(new DatabaseConnectionError(err)))
   const db = drizzle(client, { schema })
   return {
     client,
