@@ -1,4 +1,4 @@
-import { route } from '@/routes'
+import { route } from '@/route'
 import express from 'express'
 export const app = express()
 

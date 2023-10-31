@@ -30,3 +30,8 @@ export const createShortUrl = async (raw: NewShortUrl['raw']) => {
   if (!result) { throw new UnknownError() }
   return result
 }
+
+export const destroyShortUrls = async () => {
+  const { db } = await connectDb()
+  await db.delete(shortUrls)
+}

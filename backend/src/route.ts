@@ -2,6 +2,7 @@ import { create, show } from "@/api/v1/short_url"
 import { connectDb } from "@/db/connect_db"
 import { Application } from "express"
 
+
 export const route = (app: Application) => {
 
   app.get('/healthcheck', (req, res, next) => {

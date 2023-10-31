@@ -1,8 +1,16 @@
 import { app } from "@/app"
-import { createShortUrl } from "@/model/short_url_model"
+import { destroySequences } from "@/model/sequence_model"
+import { createShortUrl, destroyShortUrls } from "@/model/short_url_model"
 import request from 'supertest'
 
 describe('Short Urls', function () {
+  beforeEach(async () => {
+
+  })
+  afterEach(async () => {
+    await destroyShortUrls()
+    await destroySequences()
+  })
   it('generates a slug from a short url', async () => {
     const response = await request(app)
       .post('/s')

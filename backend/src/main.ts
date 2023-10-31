@@ -1,5 +1,5 @@
 import { app } from "@/app"
-import { route } from "@/routes"
+import { route } from "@/route"
 
 route(app)
 

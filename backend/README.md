@@ -7,10 +7,14 @@
 ```bash
 docker run -d -p 5432:5432 --name db -e POSTGRES_USER=frank -e POSTGRES_PASSWORD=123456 -e POSTGRES_DB=dev \
 -e PGDATA=/var/lib/postgresql/data/pgdata -v db:/var/lib/postgresql/data postgres:14
-
 ```
 
 ### 迁移数据库
+
+```bash
+npx drizzle-kit generate:pg
+npm run db:mig
+```
 
 ### Typescript 实现短域名服务（细节可以百度/谷歌）
 
